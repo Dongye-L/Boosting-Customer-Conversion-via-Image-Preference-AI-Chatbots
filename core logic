@@ -1,0 +1,16 @@
+// Initializing Coze Chat-App-SDK with Variable Injection
+new CozeWebSDK.WebChatClient({
+  config: {
+    bot_id: 'YOUR_BOT_ID',
+  },
+  botInfo: {
+    parameters: {
+      user_style_pref: 'Modern Chic' // This value is dynamically updated based on user clicks
+    }
+  },
+  auth: {
+    type: 'token',
+    token: 'YOUR_PAT_TOKEN', // Secure Authentication
+    onRefreshToken: () => 'YOUR_PAT_TOKEN',
+  }
+});
